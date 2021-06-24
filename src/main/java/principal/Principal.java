@@ -1,5 +1,6 @@
 package principal;
 
+import java.util.Scanner;
 import vehiculos.*;
 
 public class Principal {
@@ -8,15 +9,35 @@ public class Principal {
         Principal principal = new Principal();
     }
 
-    Vehiculo[] vehiculo = new Vehiculo[20];
-
+    private Vehiculo[] vehiculos = new Vehiculo[20];
+    private Scanner scanner = new Scanner(System.in);
     public Principal() {
         llenarVehiculos();
+        int eleccion = 0;
+        //ciclo infinito   
+        while(true){
+            eleccion = 0;
+            while(eleccion < 1 || eleccion > 20){
+                System.out.println("Ingrese un numero del 1 al 20");
+                eleccion = scanner.nextInt();
+            }
+            identificarAuto(eleccion - 1);
+        }
         
     }
-
+    public void identificarAuto(int x){
+        if(vehiculos[x] instanceof VehiculoDeCarga){
+            System.out.println("Es un Vehiculo de carga, puede transportar material");
+        }
+        if(vehiculos[x] instanceof VehiculoDeCarrera){
+            System.out.println("Es un Vehiculo de carrera, puede competir");
+        }
+        if(vehiculos[x] instanceof VehiculoCamioneta){
+            System.out.println("Es una camioneta, puede llevar personas");
+        }
+    }
     public void llenarVehiculos() {
-        for (int x = 0; x < vehiculo.length; x++) {
+        for (int x = 0; x < vehiculos.length; x++) {
 
             int tipoDeAuto = generarRandom(1, 3);
             String combustible = generarRandomGasolina();
@@ -26,13 +47,13 @@ public class Principal {
             double aceleracion = generarRandomDouble(12, 100);
             switch (tipoDeAuto) {
                 case 1:
-                    vehiculo[x] = new VehiculoDeCarga(combustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
+                    vehiculos[x] = new VehiculoDeCarga(combustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
                     break;
                 case 2:
-                    vehiculo[x] = new VehiculoDeCarrera(combustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
+                    vehiculos[x] = new VehiculoDeCarrera(combustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
                     break;
                 case 3:
-                    vehiculo[x] = new VehiculoCamioneta(combustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
+                    vehiculos[x] = new VehiculoCamioneta(combustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
                     break;
             }
         }

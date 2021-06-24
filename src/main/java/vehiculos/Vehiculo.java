@@ -1,7 +1,9 @@
+package vehiculos;
 
-package backend;
+import interfaces.Timon;
 
 public abstract class Vehiculo implements Timon {
+
     private boolean tipoDeCombustible;
     private int capasidadDeGalones;
     private int capasidadDePasajeros;
@@ -31,6 +33,29 @@ public abstract class Vehiculo implements Timon {
     public void setAceleracion(double aceleracion) {
         this.aceleracion = aceleracion;
     }
-    
-    
+
+    public boolean isTipoDeCombustible() {
+        return tipoDeCombustible;
+    }
+
+    public void setTipoDeCombustible(boolean tipoDeCombustible) {
+        this.tipoDeCombustible = tipoDeCombustible;
+    }
+
+    public int getCapasidadDeGalones() {
+        return capasidadDeGalones;
+    }
+
+    public void setCapasidadDeGalones(int capasidadDeGalones) {
+        this.capasidadDeGalones = capasidadDeGalones;
+    }
+
+    public int getCapasidadDePasajeros() {
+        return capasidadDePasajeros;
+    }
+
+    public void setCapasidadDePasajeros(int capasidadDePasajeros) {
+        this.capasidadDePasajeros = capasidadDePasajeros;
+    }
+
 }

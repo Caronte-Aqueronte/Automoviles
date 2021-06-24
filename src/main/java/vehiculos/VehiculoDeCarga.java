@@ -1,4 +1,6 @@
-package backend;
+package vehiculos;
+
+import interfaces.Carga;
 
 public class VehiculoDeCarga extends Vehiculo implements Carga {
 

@@ -15,5 +15,22 @@ public abstract class Vehiculo implements Timon {
         this.velocidadMaxima = velocidadMaxima;
         this.aceleracion = aceleracion;
     }
+
+    public double getVelocidadMaxima() {
+        return velocidadMaxima;
+    }
+
+    public void setVelocidadMaxima(double velocidadMaxima) {
+        this.velocidadMaxima = velocidadMaxima;
+    }
+
+    public double getAceleracion() {
+        return aceleracion;
+    }
+
+    public void setAceleracion(double aceleracion) {
+        this.aceleracion = aceleracion;
+    }
+    
     
 }

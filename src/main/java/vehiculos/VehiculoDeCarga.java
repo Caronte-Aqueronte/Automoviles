@@ -4,7 +4,7 @@ import interfaces.Carga;
 
 public class VehiculoDeCarga extends Vehiculo implements Carga {
 
-    public VehiculoDeCarga(boolean tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, double velocidadMaxima, double aceleracion) {
+    public VehiculoDeCarga(String tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, int velocidadMaxima, double aceleracion) {
         super(tipoDeCombustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
     }
 

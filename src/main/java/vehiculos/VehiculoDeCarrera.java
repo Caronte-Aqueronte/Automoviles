@@ -4,7 +4,7 @@ import interfaces.Deportivo;
 
 public class VehiculoDeCarrera extends Vehiculo implements Deportivo {
 
-    public VehiculoDeCarrera(boolean tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, double velocidadMaxima, double aceleracion) {
+    public VehiculoDeCarrera(String tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, int velocidadMaxima, double aceleracion) {
         super(tipoDeCombustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
     }
 

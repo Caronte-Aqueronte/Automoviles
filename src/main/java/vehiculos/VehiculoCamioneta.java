@@ -4,7 +4,7 @@ import interfaces.TransporteUrbano;
 
 public class VehiculoCamioneta extends Vehiculo implements TransporteUrbano {
 
-    public VehiculoCamioneta(boolean tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, double velocidadMaxima, double aceleracion) {
+    public VehiculoCamioneta(String tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, int velocidadMaxima, double aceleracion) {
         super(tipoDeCombustible, capasidadDeGalones, capasidadDePasajeros, velocidadMaxima, aceleracion);
     }
 

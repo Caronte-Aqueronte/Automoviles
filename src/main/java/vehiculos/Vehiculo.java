@@ -4,13 +4,13 @@ import interfaces.Timon;
 
 public abstract class Vehiculo implements Timon {
 
-    private boolean tipoDeCombustible;
+    private String tipoDeCombustible;
     private int capasidadDeGalones;
     private int capasidadDePasajeros;
-    private double velocidadMaxima;
+    private int velocidadMaxima;
     private double aceleracion;
 
-    public Vehiculo(boolean tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, double velocidadMaxima, double aceleracion) {
+    public Vehiculo(String tipoDeCombustible, int capasidadDeGalones, int capasidadDePasajeros, int velocidadMaxima, double aceleracion) {
         this.tipoDeCombustible = tipoDeCombustible;
         this.capasidadDeGalones = capasidadDeGalones;
         this.capasidadDePasajeros = capasidadDePasajeros;
@@ -18,11 +18,11 @@ public abstract class Vehiculo implements Timon {
         this.aceleracion = aceleracion;
     }
 
-    public double getVelocidadMaxima() {
+    public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
 
-    public void setVelocidadMaxima(double velocidadMaxima) {
+    public void setVelocidadMaxima(int velocidadMaxima) {
         this.velocidadMaxima = velocidadMaxima;
     }
 
@@ -34,11 +34,11 @@ public abstract class Vehiculo implements Timon {
         this.aceleracion = aceleracion;
     }
 
-    public boolean isTipoDeCombustible() {
+    public String getTipoDeCombustible() {
         return tipoDeCombustible;
     }
 
-    public void setTipoDeCombustible(boolean tipoDeCombustible) {
+    public void setTipoDeCombustible(String tipoDeCombustible) {
         this.tipoDeCombustible = tipoDeCombustible;
     }
 
